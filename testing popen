@@ -1,0 +1,35 @@
+import os
+import subprocess
+
+#file='/home/syeda/vagrant/varnish-migrate3to4/files/testvcl.vcl'
+subprocess.call(["python varnish3to4 -o testvclv4 testvcl.vcl"], shell=True)
+#subprocess.call(["python varnish3to4 -o testvcl4 $file"], shell=True)
+#subprocess.call(["cp test.py", $file], shell=True)
+#print file
+
+#sol1: os system
+
+#os.system('python varnish3to4 -o testvclv4 file')
+
+
+#sol2: subprocesscall
+
+# subprocess.call(['df', '-h'])
+#subprocess.call('du -hs $HOME', shell=True)
+
+#OR
+
+#f = open("blah.txt", "w")
+#subprocess.call(["/home/myuser/run.sh", "/tmp/ad_xml",  "/tmp/video_xml"], stdout=f)
+
+
+#sol3: subprocess.Popen
+
+
+#sol4: no callign os, use shutil
+
+#import shutil
+
+#with open('myfile', 'w') as outfile:
+#    for infile in ('file1', 'file2', 'file3'):
+#        shutil.copyfileobj(open(infile), outfile
